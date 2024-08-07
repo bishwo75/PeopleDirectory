@@ -1,0 +1,34 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "build:server": "node build.js server",
+    "build:client": "node build.js client",
+    "start": "npm run build && node dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "esbuild": "^0.21.3",
+     "fs-extra": "^11.1.1",
+      "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "fastify": "^4.27.0",
+    "msw": "^2.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "valibot": "^0.30.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "mockServer"
+    ]
+  }
+}
